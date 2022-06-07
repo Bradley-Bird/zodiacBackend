@@ -9,6 +9,8 @@ block layout-content
                      ul 
                         li
                             a(href = '/zodiac') all zodiacs
+                            
                      ul
-                        each sign in zodiacStore
-                            li sign.name
+                        each sign in zodiac.zodiac
+                            li
+                                a(href = `/zodiac/${sign.id}`) !{sign.name}
