@@ -1,0 +1,16 @@
+extends layout
+
+block layout-content   
+        div.view.WelcomeView    
+            h1.banner Zodiac 
+                div.Message
+                div.Title
+                    h3 links 
+                     ul 
+                        li
+                            a(href = '/zodiac') all zodiacs
+                            
+                     ul
+                        each sign in zodiac.zodiac
+                            li
+                                a(href = `/zodiac/${sign.id}`) !{sign.name}
